@@ -2,20 +2,22 @@
 html {
   font-size: 62.5%;
 }
-
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: #272727;
 }
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
-
 .main-container {
   padding: 1rem;
   color: white;
@@ -23,44 +25,37 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
-
 .bustamante-logo {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 200; // Available: 200, 300.
+  font-weight: 200;
   text-transform: uppercase;
   animation: logoAnim 2s;
   animation-fill-mode: forwards;
 }
-
 .anim-delay-1 {
   opacity: 0;
   animation: entrance 1s 1 2s;
   animation-fill-mode: forwards;
 }
-
 @keyframes entrance {
   0% {
     opacity: 0;
     transform: translateY(3rem);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 @keyframes logoAnim {
   0% {
     opacity: 0;
-    transform: translateX(calc(~"50vw - 130px")) translateY(calc(~"50vh - 10px"));
+    transform: translateX(calc(50vw - 130px)) translateY(calc(50vh - 10px));
   }
-
   80% {
     opacity: 1;
-    transform: translateX(calc(~"50vw - 130px")) translateY(calc(~"50vh - 10px"));
+    transform: translateX(calc(50vw - 130px)) translateY(calc(50vh - 10px));
   }
-
   100% {
     transform: translateX(0) translateY(0);
   }

@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.navigation a {
+  margin-right: 2rem;
+  color: #4daeff;
+  text-decoration: none;
+}
+.navigation a:hover {
+  text-decoration: underline;
+}

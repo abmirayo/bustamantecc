@@ -1,7 +1,7 @@
 {
   "name": "bustamantecc",
   "version": "0.1.0",
-  "homepage": "http://bustamante.cc/web",
+  "homepage": "http://bustamante.cc",
   "private": true,
   "dependencies": {
     "react": "^15.5.3",
@@ -15,11 +15,11 @@
   },
   "scripts": {
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
+    "build": "react-scripts build",
     "start-js": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "less src/ src/",
-    "watch-css": "node node_modules/less-watch-compile/ -w src/ -o src/"
+    "watch-css": "less-watcher -d src -p \"\""
   }
 }
