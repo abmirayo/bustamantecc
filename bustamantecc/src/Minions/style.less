@@ -1,18 +1,30 @@
+@import "../global.varless";
+
 .listening-now {
 
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
-  align-content: center;
-
+  margin: 1rem 0;
   a {
+    font-family: @font-alt;
+    text-transform: uppercase;
     margin-right: 2rem;
-    color: rgb(77, 174, 255);
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    color: inherit;
+    font-weight: 300;
+    padding: 0 2rem 0.5rem;
+
+    &:last-child {
+      margin-right: 0;
     }
+
+    &:hover {
+      border-bottom: 1px solid white;
+    }
+  }
+
+  @media all and (min-width: @media-query-1) {
+    font-size: 1.6rem;
   }
 }

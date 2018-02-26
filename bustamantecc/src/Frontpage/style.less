@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300');
+@import "../global.varless"
+
 html {
   font-size: 62.5%;
 }
@@ -21,11 +23,11 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-size: 1.5rem;
   font-weight: 200;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: @font-main;
 }
 
 .bustamante-logo {
-  font-family: 'Montserrat', sans-serif;
+  font-family: @font-alt;
   font-weight: 200; // Available: 200, 300.
   text-transform: uppercase;
   animation: logoAnim 2s;

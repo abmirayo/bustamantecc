@@ -1,0 +1,16 @@
+.wrapper__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper__flex * {
+  text-align: center;
+}
+@media all and (min-width: 50rem) {
+  .wrapper__flex {
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+}

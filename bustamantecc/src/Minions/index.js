@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { WrapperFlex } from '../StructureComponents'
 
 import './style.css';
 
@@ -14,7 +15,7 @@ class ListeningNow extends Component {
   }
 
   updateContents = () => {
-    const scrobblingUrl = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=abustamante&api_key=4132c976306c9ccb03bee5babcf9b295&format=json&limit=1';
+    const scrobblingUrl = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=abustamante&api_key=4132c976306c9ccb03bee5babcf9b295&format=json&limit=1';
     fetch(scrobblingUrl)
     .then((response) => {
       if(response.ok) {
@@ -34,7 +35,7 @@ class ListeningNow extends Component {
         {this.state.musicData && <div className="listening-now">
           <h4>{this.state.musicData.name}</h4>
           <h5>{this.state.musicData.artist["#text"]}</h5>
-          <img src={this.state.musicData.image[1]["#text"]}/>
+          <img alt="Album art" src={this.state.musicData.image[1]["#text"]}/>
         </div>}
       </div>
     );
@@ -42,11 +43,16 @@ class ListeningNow extends Component {
 }
 
 const Navigation = () => (
-  <nav className="navigation">
-    <Link to="blog">Blog</Link>
-    <Link to="work">Work</Link>
-    <Link to="fun">Fun</Link>
-  </nav>
+  <WrapperFlex>
+    <h1 className="bustamante-logo">
+      bustamante.cc
+    </h1>
+    <nav className="navigation">
+      <Link to="blog">Blog</Link>
+      <Link to="work">Work</Link>
+      <Link to="fun">Fun</Link>
+    </nav>
+  </WrapperFlex>
 )
 
 module.exports = {

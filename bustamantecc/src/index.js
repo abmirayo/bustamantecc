@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Frontpage from './Frontpage';
-import NotFound from './NotFound';
+import Blog from './Blog';
 
 ReactDOM.render(
   <BrowserRouter>
     <div>
       <Route exact path="/" component={Frontpage} />
-      <Route path="/test" component={NotFound} />
+      <Route exact path="/blog" component={Blog} />
     </div>
   </BrowserRouter>,
   document.getElementById('root')

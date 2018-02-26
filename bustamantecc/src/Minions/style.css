@@ -1,13 +1,23 @@
 .navigation {
-  display: flex;
-  align-items: center;
-  align-content: center;
+  margin: 1rem 0;
 }
 .navigation a {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
   margin-right: 2rem;
-  color: #4daeff;
   text-decoration: none;
+  color: inherit;
+  font-weight: 300;
+  padding: 0 2rem 0.5rem;
+}
+.navigation a:last-child {
+  margin-right: 0;
 }
 .navigation a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid white;
+}
+@media all and (min-width: 50rem) {
+  .navigation {
+    font-size: 1.6rem;
+  }
 }

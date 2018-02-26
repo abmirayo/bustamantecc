@@ -1,0 +1,18 @@
+@import "../global.varless";
+
+.wrapper__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  * {
+    text-align: center;
+  }
+
+  @media all and (min-width: @media-query-1) {
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+}
